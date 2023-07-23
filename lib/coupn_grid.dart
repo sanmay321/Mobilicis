@@ -1,6 +1,4 @@
 import 'package:cached_network_image/cached_network_image.dart';
-import 'package:coupon_uikit/coupon_uikit.dart';
-import 'package:dotted_decoration/dotted_decoration.dart';
 import 'package:flutter/material.dart';
 
 class CoupnsGrid extends StatelessWidget {
