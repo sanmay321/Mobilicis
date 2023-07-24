@@ -34,10 +34,27 @@ class _MyAppState extends State<MyApp> {
   final TextEditingController _controller = TextEditingController();
 
   Future<void> gett() async {
-    var url1 = Uri.parse('https://dev2be.oruphones.com/api/v1/global/assignment/getFilters?isLimited=true');
-    var url2 = Uri.parse('https://dev2be.oruphones.com/api/v1/global/assignment/getListings?page=1&limit=15');  //hardcoded 15 pc
-    var response1 = await http.get(url1);
-    var response2 = await http.get(url2);
+    Map<String, dynamic> parameters1 = {
+      "isLimited":"true"
+    };
+    Map<String, dynamic> parameters2 = {
+      "page":"1",
+      "limit":"15",
+    };
+    var uri1 = Uri(
+      scheme: 'https',
+      host: 'dev2be.oruphones.com',
+      path: '/api/v1/global/assignment/getFilters',
+      queryParameters: parameters1,
+    );
+    var uri2 = Uri(
+      scheme: 'https',
+      host: 'dev2be.oruphones.com',
+      path: '/api/v1/global/assignment/getListings',
+      queryParameters: parameters2,
+    );
+    final response1 = await http.get(uri1);
+    final response2 = await http.get(uri2);
 
     if (response1.statusCode == 200) {
       Map<String, dynamic> data = jsonDecode(response1.body);
