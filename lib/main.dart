@@ -121,8 +121,6 @@ class _MyAppState extends State<MyApp> {
                           const SizedBox(
                             width: 110,
                           ),// Sized
-                          // Padding(
-                          // padding: EdgeInsets.all(8.0),
                           Text(
                             "India",
                           ),
@@ -131,11 +129,6 @@ class _MyAppState extends State<MyApp> {
                             width: 15,
                           ),
                           Icon(Icons.notifications),
-                          // ),
-                          // const Padding(
-                          // padding: EdgeInsets.all(0.0),
-
-                          // ),// Box
                         ],
                       ),
                       const SizedBox(
@@ -152,7 +145,6 @@ class _MyAppState extends State<MyApp> {
                                 fillColor: const Color(0xFFFFFFFF),
                                 isDense: true,
                                 contentPadding: const EdgeInsets.symmetric(horizontal: 15.0),
-                                /* -- Text and Icon -- */
                                 hintText: "Search Products...",
                                 hintStyle: const TextStyle(
                                   fontSize: 18,
@@ -163,14 +155,13 @@ class _MyAppState extends State<MyApp> {
                                     postcall();
                                 }, icon: Icon(Icons.search),
                                 ), // Icon
-                                /* -- Border Styling -- */
                                 border: OutlineInputBorder(
                                   borderRadius: BorderRadius.circular(45.0),
                                   borderSide: const BorderSide(
                                     width: 2.0,
                                     color: Color(0xFFFF0000),
-                                  ), // BorderSide
-                                ), // OutlineInputBorder
+                                  ),
+                                ),
                                 enabledBorder: OutlineInputBorder(
                                   borderRadius: BorderRadius.circular(45.0),
                                   borderSide: const BorderSide(
